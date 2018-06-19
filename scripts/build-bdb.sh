@@ -16,9 +16,10 @@ tar xzf $ARCHIVE
 
 pushd $TARGET/build_unix
 ../dist/configure --prefix=$PREFIX \
+                  --disable-replication \
                   --enable-compat185 \
-                  --enable-dbm \
-                  --enable-cxx &&
+                  --enable-cxx \
+                  --enable-dbm &&
 make &&
 make install
 RESULT=$?

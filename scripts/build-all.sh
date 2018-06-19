@@ -20,7 +20,7 @@ do
   fi
 done <<'EOS'
 openssl
-#cyrus-sasl
 bdb
-opeldap
+cyrus-sasl
+openldap
 EOS

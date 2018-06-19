@@ -1,1 +1,4 @@
-# build_OpenLDAP
+build_OpenLDAP
+==============
+
+./scripts/build-all.sh
