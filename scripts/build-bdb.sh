@@ -2,7 +2,8 @@
 SCRIPT_DIR=$(cd $(dirname $0);pwd)
 source $SCRIPT_DIR/build-common.sh
 
-TARGET=db-18.1.25
+# require 4.4 or later, but less than 6.0.20
+TARGET=db-5.3.28
 
 # download
 ARCHIVE=$ARCHIVES_DIR/$TARGET.tar.gz
@@ -12,7 +13,7 @@ DOWNLOAD_URL=http://download.oracle.com/berkeley-db/$TARGET.tar.gz
 # build
 pushd $BUILD_DIR
 [[ -d $TARGET ]] && rm -rf $TARGET
-tar xzf $ARCHIVE
+tar xf $ARCHIVE
 
 pushd $TARGET/build_unix
 ../dist/configure --prefix=$PREFIX \

@@ -12,7 +12,7 @@ DOWNLOAD_URL=https://www.openldap.org/software/download/OpenLDAP/openldap-releas
 # build
 pushd $BUILD_DIR
 [[ -d $TARGET ]] && rm -rf $TARGET
-tar xzf $ARCHIVE
+tar xf $ARCHIVE
 
 pushd $TARGET
 ./configure --prefix=$PREFIX &&
