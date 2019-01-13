@@ -4,9 +4,7 @@ BASE_DIR=$(cd $SCRIPT_DIR/..;pwd)
 
 export LANG=C
 export PREFIX=$(cd $BASE_DIR/..;pwd)
-export PREFIX_BUILDTOOL=$PREFIX/buildtool
-export PATH=$PREFIX_BUILDTOOL/bin:$PREFIX/bin:$PATH
-#export PKG_CONFIG=$PREFIX_BUILDTOOL/bin/pkg-config
+export PATH=$PREFIX/bin:$PATH
 export PKG_CONFIG_PATH=$PREFIX/lib/pkgconfig
 export CFLAGS="-I$PREFIX/include"
 export CPPFLAGS="-I$PREFIX/include"
