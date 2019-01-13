@@ -4,7 +4,7 @@ SCRIPT_DIR=$(cd $(dirname $0);pwd)
 case "$1" in
   centos6|ubuntu1404)
     pushd $SCRIPT_DIR
-    docker-compose run --rm $1 /usr/local/workspace/scripts/build-all.sh
+    docker-compose run --rm $1 /opt/openldap/workspace/scripts/build-all.sh
     popd
     ;;
   *)

@@ -7,9 +7,9 @@ services:
     tty: true
     volumes:
       - './centos6/home/:/home/:rw'
-      - './centos6/usr/local/:/usr/local/:rw'
-      - '../scripts/:/usr/local/workspace/scripts/:rw'
-      - '../archives/:/usr/local/workspace/archives/:rw'
+      - './centos6/opt/openldap/:/opt/openldap/:rw'
+      - '../scripts/:/opt/openldap/workspace/scripts/:rw'
+      - '../archives/:/opt/openldap/workspace/archives/:rw'
   ubuntu1404:
     image: ubuntu_openldap:14.08
     build: ./ubuntu1404
@@ -17,6 +17,6 @@ services:
     tty: true
     volumes:
       - './ubuntu1404/home/:/home/:rw'
-      - './ubuntu1404/usr/local/:/usr/local/:rw'
-      - '../scripts/:/usr/local/workspace/scripts/:rw'
-      - '../archives/:/usr/local/workspace/archives/:rw'
+      - './ubuntu1404/opt/openldap/:/opt/openldap/:rw'
+      - '../scripts/:/opt/openldap/workspace/scripts/:rw'
+      - '../archives/:/opt/openldap/workspace/archives/:rw'
