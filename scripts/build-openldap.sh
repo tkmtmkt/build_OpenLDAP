@@ -2,7 +2,7 @@
 SCRIPT_DIR=$(cd $(dirname $0);pwd)
 source ${SCRIPT_DIR}/build-common.sh
 
-TARGET=openldap-2.4.46
+TARGET=openldap-2.4.47
 
 # download
 ARCHIVE=${ARCHIVES_DIR}/${TARGET}.tgz
