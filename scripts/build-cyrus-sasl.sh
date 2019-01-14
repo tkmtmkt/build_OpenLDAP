@@ -2,14 +2,11 @@
 SCRIPT_DIR=$(cd $(dirname $0);pwd)
 source ${SCRIPT_DIR}/build-common.sh
 
-# OpenSSL 1.1.0 support was added in upcoming 2.1.27 release
-#TARGET=cyrus-sasl-2.1.26
 TARGET=cyrus-sasl-2.1.27
 
 # download
 ARCHIVE=${ARCHIVES_DIR}/${TARGET}.tar.gz
-#DOWNLOAD_URL=ftp://ftp.cyrusimap.org/cyrus-sasl/${TARGET}.tar.gz
-DOWNLOAD_URL=ftp://ftp.cyrusimap.org/cyrus-sasl/${TARGET}-rc8.tar.gz
+DOWNLOAD_URL=https://github.com/cyrusimap/cyrus-sasl/releases/download/${TARGET}/${TARGET}.tar.gz
 [[ ! -s ${ARCHIVE} ]] && curl -ksSL -o ${ARCHIVE} ${DOWNLOAD_URL}
 
 # build
