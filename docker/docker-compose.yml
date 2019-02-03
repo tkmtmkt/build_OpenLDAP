@@ -11,7 +11,7 @@ services:
       - '../scripts/:/opt/openldap/workspace/scripts/:rw'
       - '../archives/:/opt/openldap/workspace/archives/:rw'
   ubuntu1404:
-    image: ubuntu_openldap:14.08
+    image: ubuntu_openldap:14.04
     build: ./ubuntu1404
     hostname: ubuntu1404
     tty: true
